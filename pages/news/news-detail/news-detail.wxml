@@ -1,0 +1,19 @@
+<view class="detail-container">
+    <image class="banner" src="{{headimg}}"></image>
+    <view class="author-msg">
+        <image class="author-icon" src="{{authoricon1}}"></image>
+        <text class="author-name">{{author}}</text>
+        <text class="conts-text">发表于</text>
+        <text class="date">{{dataTime}}</text>
+    </view>
+    <text class="title">{{title}}</text>
+    <view class="tool">
+        <view class="tool-icon">
+            <image class="share-icon" src="../../images/fx.png"></image>
+            <image wx:if="{{collected}}" catchtap="collectTap" class="coolcet-icon" src="../../images/sch.png"></image>
+            <image wx:else catchtap="collectTap" class="coolcet-icon" src="../../images/sc.png"></image>
+        </view>
+        <view class="division-line"></view>
+    </view>
+    <text class="detail">{{detail}}</text>
+</view>
