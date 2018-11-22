@@ -39,6 +39,13 @@
     color: #999;
 }
 
+.playermusic {
+    width: 60rpx;
+    height: 60rpx;
+    vertical-align: middle;
+    margin-left: 40rpx;
+}
+
 .title{
     margin-left: 40rpx;
     font-size: 36rpx;

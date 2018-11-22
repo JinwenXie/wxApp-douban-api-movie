@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        musicflag: false
     },
 
     /**
@@ -54,48 +54,53 @@ Page({
         })
     },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
+    shareTap: function (event) {
+        wx.showActionSheet({
+            itemList: [
+                "乐章",
+                "听过",
+                "乐趣",
+                "聊聊"
+            ],
+            itemColor: "#c00",
+            success: function (res) {
+                wx.showToast({
+                    title: "暂时无法前往",
+                    duration: 1000
+                })
+            }
+        })
+    },
+    onShareAppMessage: function () {
+        // 用户点击右上角分享
+        return {
+            title: '蓝莓派', // 分享标题
+            desc: '和音乐一起分享时光', // 分享描述
+            path: 'http://www.iwen.wiki/blog' // 分享路径
+        }
     },
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
+    playermusic: function(event){
+        var currentNewsId = this.data.newsid;
+        var musicData = newsData.newsData[currentNewsId].music;
+        var musicflag = this.data.musicflag;
+        if (musicflag) {
+            wx.pauseBackgroundAudio();
+            this.setData({
+                musicflag: false
+            })
 
+        } else {
+            wx.playBackgroundAudio({
+                dataUrl: musicData.url,
+                title: musicData.title,
+                coverImgUrl: musicData.coverImg,
+            })
+            this.setData({
+                musicflag: true
+            })
+        }
     },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
     /**
      * 用户点击右上角分享
      */

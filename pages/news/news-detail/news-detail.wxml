@@ -5,6 +5,8 @@
         <text class="author-name">{{author}}</text>
         <text class="conts-text">发表于</text>
         <text class="date">{{dataTime}}</text>
+        <!-- 音乐播放 -->
+        <image  catchtap="playermusic" class="playermusic" src="{{musicflag ? '../../images/earphone.png' : '../../images/eartag.png'}}"></image>
     </view>
     <text class="title">{{title}}</text>
     <view class="tool">

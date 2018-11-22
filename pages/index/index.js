@@ -1,6 +1,6 @@
 Page({
     goNewsTab: function(event){
-        wx.navigateTo({
+        wx.switchTab({
             url: '../news/news'
         })
     }
