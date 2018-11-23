@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/news/news",
     "pages/news/news-detail/news-detail",
-    "pages/movies/movie-more/movie-more"
+    "pages/movies/movie-more/movie-more",
+    "pages/movies/movie-details/movie-details"
   ],
   "window": {
     "navigationBarTitleText": "蓝莓派",

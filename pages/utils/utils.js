@@ -33,7 +33,32 @@ function httpRequest(url, callback) {
     })
 }
 
+//拆分字符串，通过斜杠链接
+function convertToCastString(casts) {
+    var castsjoin = "";
+    for (var idx in casts) {
+        castsjoin += casts[idx].name + " / ";
+    }
+    castsjoin = castsjoin.substring(0, castsjoin.length - 3);
+    return castsjoin;
+}
+
+//将演员和演员的名字合并成数组处理
+function convertToCastInfos(casts) {
+    var castsArray = []
+    for (var idx in casts) {
+        var cast = {
+            img: casts[idx].avatars ? casts[idx].avatars.large : "",
+            name: casts[idx].name
+        }
+        castsArray.push(cast);
+    }
+    return castsArray;
+}
+
 module.exports = {
     convertToStarsArray: convertToStarsArray,
-    httpRequest: httpRequest
+    httpRequest: httpRequest,
+    convertToCastString: convertToCastString,
+    convertToCastInfos: convertToCastInfos
 }

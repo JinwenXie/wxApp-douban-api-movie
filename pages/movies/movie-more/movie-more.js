@@ -5,7 +5,9 @@ var utils = require("../../utils/utils.js");
 Page({
     data: {
         movies: [],
-        totalMovie: 0
+        requestStartNum: 0,
+        totalMovie: [],
+        isEmpty: true
     },
 
     onLoad: function (options) {
@@ -40,13 +42,19 @@ Page({
 
     onReachBottom: function(event){
         console.log(this.data.totalMovie);
-        var nextRequestUrl = this.data.doubanUrl + "?start=" + this.data.totalMovie + "&count=20";
+        var nextRequestUrl = this.data.doubanUrl + "?start=" + this.data.requestStartNum + "&count=20";
         utils.httpRequest(nextRequestUrl, this.callback);
         wx.showNavigationBarLoading();
     },
 
+    onPullDownRefresh: function(){
+        var doubanUrl = this.data.doubanUrl;
+        this.data.totalMovie = [];
+        this.data.isEmpty = false;
+        utils.httpRequest(doubanUrl, this.callback);
+    },
+
     callback: function(res){
-        console.log(res);
         var movies = [];
         for (var idx in res.subjects) {
             var subject = res.subjects[idx];
@@ -64,10 +72,24 @@ Page({
             }
             movies.push(temp);
         }
+        var totalMovie = [];
+        if (this.data.isEmpty) {
+            totalMovie = movies;
+            this.data.isEmpty = false;
+        } else {
+            totalMovie = this.data.movies.concat(movies);
+        }
         this.setData({
-            movies: movies
+            movies: totalMovie
         });
-        this.data.totalMovie += 20;
+        this.data.requestStartNum += 20;
         wx.hideNavigationBarLoading();
+    },
+
+    onMvieDetails: function(event){
+        var movieId = event.currentTarget.dataset.movieid;
+        wx.navigateTo({
+            url: '../movie-details/movie-details?movieid=' + movieId
+        })
     }
 })
