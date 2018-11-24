@@ -8,7 +8,10 @@ Page({
         //这几个值一定要绑定，异步处理，如果不绑定则找不到对象，所以一定要初始化
         in_theaters: [],
         coming_soon: [],
-        top250: []
+        top250: [],
+        searchData: [],
+        containerShow: true,
+        searchPannerShow: false
     },
     onLoad: function(event) {
         var publicUrl = app.globalData.doubanBase;
@@ -47,10 +50,7 @@ Page({
         var movies = [];
         for (var idx in res.subjects) {
             var subject = res.subjects[idx];
-            var title = subject.title;
-            if (title.length >= 6) {
-                title = title.substring(0, 6) + "...";
-            }
+            var title = util.cutString(subject.title,0,6);
             //处理评星
             var temp = {
                 stars: util.convertToStarsArray(subject.rating.stars),
@@ -82,6 +82,31 @@ Page({
         wx.navigateTo({
             url: 'movie-details/movie-details?movieid=' + movieId
         })
+    },
+
+    onBindFocus: function(event){
+        this.setData({
+            containerShow: false,
+            searchPannerShow: true
+        });
+    },
+
+    onBindBlur: function(event){
+        
+    },
+    
+    onBindInput: function(event){
+        var key = event.detail.value;
+        var searchUrl = app.globalData.doubanBase + "/v2/movie/search?q=" + key;
+        this.getMovieListData(searchUrl,"searchData","");
+        wx.showNavigationBarLoading();
+    },
+
+    onCancelBlurTap: function(event){
+        this.setData({
+            containerShow: true,
+            searchPannerShow: true
+        });
     }
 
 })

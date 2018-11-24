@@ -44,7 +44,9 @@ Page({
             castsInfo: utils.convertToCastInfos(data.casts),
             summary: data.summary
         }
-        console.log(movie);
+        wx.setNavigationBarTitle({
+            title: utils.cutString(movie.title,0,6)
+        });
         this.setData({
             movie: movie
         })

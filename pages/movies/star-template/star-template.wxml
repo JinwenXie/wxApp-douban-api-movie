@@ -2,7 +2,7 @@
     <view class="stars-container">
         <view class="stars">
             <block wx:for="{{stars}}" wx:for-item="item" wx:key="key">
-                <image src="{{item ? '../images/star.png' : '../images/chat.png' }}"></image>
+                <image src="{{item ? 'https://i.imgur.com/9EwBFZD.png' : 'https://i.imgur.com/dVd3Z0b.png' }}"></image>
             </block>
         </view>
         <text class="star-score ">{{average}}分</text>

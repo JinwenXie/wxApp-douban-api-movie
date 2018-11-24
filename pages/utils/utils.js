@@ -56,9 +56,18 @@ function convertToCastInfos(casts) {
     return castsArray;
 }
 
+function cutString(str,start,end){
+    if(typeof(str)!="string") return false;
+    if (str.length >= 6) {
+        str = str.substring(start, end) + "...";
+    }
+    return str;
+}
+
 module.exports = {
     convertToStarsArray: convertToStarsArray,
     httpRequest: httpRequest,
     convertToCastString: convertToCastString,
-    convertToCastInfos: convertToCastInfos
+    convertToCastInfos: convertToCastInfos,
+    cutString: cutString
 }

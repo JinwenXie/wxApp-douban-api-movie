@@ -49,7 +49,7 @@
   <view class="hr"></view>
   <view class="cast">
     <text class="cast-font"> 影人</text>
-    <scroll-view class="cast-imgs" scroll-x="true" style="width:100%">
+    <scroll-view class="cast-imgs" scroll-x="true">
       <block wx:for="{{movie.castsInfo}}" wx:for-item="item" wx:key="key">
         <view class="cast-container">
           <image class="cast-img" src="{{item.img}}"></image>
