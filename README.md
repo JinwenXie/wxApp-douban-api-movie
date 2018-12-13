@@ -1,4 +1,3 @@
-# wxApp-douban-api-movie
 ### 克隆到本地
 
 	git@github.com:JinwenXie/wxApp-douban-api-movie.git
