@@ -1,12 +1,20 @@
 <template name="starTemplate">
     <view class="stars-container">
         <view class="stars">
+            <!-- <image src="images/star.png"></image>
             <image src="images/star.png"></image>
             <image src="images/star.png"></image>
             <image src="images/star.png"></image>
-            <image src="images/star.png"></image>
-            <image src="images/star.png"></image>
+            <image src="images/star.png"></image> -->
+            <block wx:for="{{ stars }}" wx:for-item="star" wx:key="key">
+                <image wx:if="{{star}}" 
+                    src="https://jinwenxie.github.io/static/img/wxApp/wxApp-douban-api-movie/images/star.png">
+                </image>
+                <image wx:else 
+                    src="https://jinwenxie.github.io/static/img/wxApp/wxApp-douban-api-movie/images/chat.png">
+                </image>
+            </block>
         </view>
-        <text class="star-score">7.0</text>
+        <text class="star-score">{{ score }}分</text>
     </view>
 </template>

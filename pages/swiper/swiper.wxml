@@ -10,7 +10,7 @@
             next-margin="30rpx"
             display-multiple-items="3"
         >
-            <block wx:for="{{ swiperData.movieData }}" wx:key="index">
+            <block wx:for="{{ swiperData.movieData }}" wx:key="key">
                 <swiper-item>
                     <image src="{{ item }}"></image>
                 </swiper-item>

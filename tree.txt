@@ -1,0 +1,48 @@
+文件夹 PATH 列表
+卷序列号为 EE0F-0BD7
+wxApp-douban-api-movie:
+│  app.js
+│  app.json
+│  app.wxss
+│  project.config.json
+│  
+└─pages
+    │  index.js
+    │  index.json
+    │  index.wxml
+    │  index.wxss
+    │  
+    ├─coming-soon
+    │      coming-soon.js
+    │      coming-soon.json
+    │      coming-soon.wxml
+    │      coming-soon.wxss
+    │      
+    ├─data
+    ├─images
+    │      
+    ├─movie-list
+    │  │  movie-list.wxml
+    │  │  movie-list.wxss
+    │  │  
+    │  ├─movie-container
+    │  │      movie-container.wxml
+    │  │      movie-container.wxss
+    │  │      
+    │  └─star
+    │          star.wxml
+    │          star.wxss
+    │          
+    ├─swiper
+    │      swiper.wxml
+    │      swiper.wxss
+    │      
+    ├─top250
+    │      top250.js
+    │      top250.json
+    │      top250.wxml
+    │      top250.wxss
+    │      
+    └─utils
+            utils.js
+            

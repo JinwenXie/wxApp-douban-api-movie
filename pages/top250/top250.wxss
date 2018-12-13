@@ -1,0 +1,32 @@
+@import '../swiper/swiper.wxss';
+@import '../movie-list/movie-list.wxss';
+
+.index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search {
+    width: 700rpx;
+    padding: 10rpx 0;
+    border: 1px solid #ddd;
+    border-radius: 20rpx;
+    margin: 30rpx 0;
+}
+.search-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    text-align: center;
+    font-size: 30rpx;
+}
+.search icon {
+    margin-right: 10rpx;
+    position: relative;
+    top: 2rpx;
+}
+
+
+

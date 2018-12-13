@@ -1,6 +1,6 @@
 //获取全局APP里的URL
 var app = getApp();
-var util = require("utils/utils.js");
+var util = require("../utils/utils.js");
 
 Page({
     data: {
@@ -11,31 +11,31 @@ Page({
             duration: 1000,
             movieData: []
         },
-        BeiJingMovie: {},
-        ShangHaiMovie: {},
-        GuangZhouMovie: {},
-        ChengDuMovie: {}
+        actionMovie: {},
+        comedyMovie: {},
+        loveMovie: {},
+        scienceFictionMovie: {}
 
     },
 
     onLoad: function (event) {
         var publicUrl = app.globalData.doubanBase;
-        var in_theatersUrl = publicUrl + "in_theaters" + "?start=0&count=10";
-        var BeiJing = publicUrl + "in_theaters" + "?city=北京&start=0&count=3";
-        var GuangZhou = publicUrl + "in_theaters" + "?city=广州&start=0&count=3";
-        var ShangHai = publicUrl + "in_theaters" + "?city=上海&start=0&count=3";
-        var ChengDu = publicUrl + "in_theaters" + "?city=成都&start=0&count=3";
+        var in_theatersUrl = publicUrl + "top250" + "?start=0&count=10";
+        var action = publicUrl + "top250" + "?tag=动作&start=0&count=3";
+        var comedy = publicUrl + "top250" + "?tag=喜剧&start=4&count=3";
+        var love = publicUrl + "top250" + "?tag=爱情&start=7&count=3";
+        var scienceFiction = publicUrl + "top250" + "?tag=科幻&start=10&count=3";
 
         wx.showNavigationBarLoading();
-        this.getMovieListData(in_theatersUrl, "in_theaters", "正在热映","swiper");
-        this.getMovieListData(BeiJing, "BeiJingMovie", "北京");
-        this.getMovieListData(GuangZhou, "GuangZhouMovie", "广州");
-        this.getMovieListData(ShangHai, "ShangHaiMovie", "上海");
-        this.getMovieListData(ChengDu, "ChengDuMovie", "成都");
+        this.getMovieListData(in_theatersUrl, "in_theaters", "正在热映", "swiper");
+        this.getMovieListData(action, "actionMovie", "动作");
+        this.getMovieListData(comedy, "comedyMovie", "喜剧");
+        this.getMovieListData(love, "loveMovie", "爱情");
+        this.getMovieListData(scienceFiction, "scienceFictionMovie", "科幻");
     },
 
     //请求数据fn
-    getMovieListData: function (url, category, categorytitle,swiperRe) {
+    getMovieListData: function (url, category, categorytitle, swiperRe) {
         var that = this;
         wx.request({
             url: url,
@@ -44,7 +44,7 @@ Page({
                 "Content-Type": "application/xml"
             }, // 设置请求的 header
             success: function (res) {
-                that.callback(res.data, category, categorytitle,swiperRe);
+                that.callback(res.data, category, categorytitle, swiperRe);
             },
             fail: function () {
                 // fail
@@ -55,7 +55,7 @@ Page({
         })
     },
 
-    callback: function (res, category, categorytitle,swiperRe) {
+    callback: function (res, category, categorytitle, swiperRe) {
         var movies = [];
         var swiperMovie = [];
         for (var idx in res.subjects) {
@@ -65,7 +65,7 @@ Page({
             } else {
                 var temp = {
                     stars: util.convertToStarsArray(subject.rating.stars),
-                    title: util.cutString(subject.title,0,6),
+                    title: util.cutString(subject.title, 0, 6),
                     average: subject.rating.average,
                     coverageUrl: subject.images.large,
                     movieId: subject.id

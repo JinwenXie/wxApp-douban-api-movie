@@ -1,5 +1,5 @@
-<import src="swiper/swiper.wxml" />
-<import src="movie-list/movie-list.wxml" />
+<import src="../swiper/swiper.wxml" />
+<import src="../movie-list/movie-list.wxml" />
 
 <view class="index-container">
 

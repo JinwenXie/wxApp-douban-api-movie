@@ -1,13 +1,40 @@
 {
-  "pages": [
-    "pages/index"
-  ],
-  "window": {
-    "navigationBarTitleText": "正在热映",
-    "navigationBarBackgroundColor": "#333",
-    "navigationBarTextStyle": "white",
-    "navigationStyle":"default"
-    
-  },
-  "debug": false
+    "pages": [
+        "pages/index",
+        "pages/top250/top250",
+        "pages/coming-soon/coming-soon"
+    ],
+    "window": {
+        "navigationBarTitleText": "正在热映",
+        "navigationBarBackgroundColor": "#333",
+        "navigationBarTextStyle": "white",
+        "navigationStyle": "default"
+    },
+    "tabBar": {
+        "color": "#b7b7b7",
+        "selectedColor": "#AB956D",
+        "borderStyle": "#f5f5f5",
+        "backgroundColor": "#f5f5f5",
+        "list": [
+            {
+                "pagePath": "pages/index",
+                "iconPath": "pages/images/icon_ry.png",
+                "selectedIconPath": "pages/images/icon_ry.png",
+                "text": "正在热映"
+            },
+            {
+                "pagePath": "pages/coming-soon/coming-soon",
+                "iconPath": "pages/images/icon_jjsy.png",
+                "selectedIconPath": "pages/images/icon_jjsy.png",
+                "text": "即将上映"
+            },
+            {
+                "pagePath": "pages/top250/top250",
+                "iconPath": "pages/images/icon_phb.png",
+                "selectedIconPath": "pages/images/icon_phb.png",
+                "text": "排行榜"
+            }
+        ]
+    },
+    "debug": false
 }
