@@ -1,0 +1,17 @@
+<import src="swiper/swiper.wxml" />
+<import src="movie-list/movie-list.wxml" />
+
+<view class="index-container">
+
+    <template is="swiper" data="{{ swiperData }}"></template>
+
+    <view class="search">
+        <view class="search-text">
+            <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+            搜 索
+        </view>
+    </view>
+    
+    <template is="movieList" data="{{ BeiJingMovie }}"></template>
+
+</view>

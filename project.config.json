@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.3.0",
 	"appid": "wx0185acdea560bf37",
-	"projectname": "first",
+	"projectname": "doubanMovie",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -24,6 +24,10 @@
 			"list": []
 		},
 		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
 			"current": -1,
 			"list": []
 		},
