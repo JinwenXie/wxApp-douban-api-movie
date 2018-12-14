@@ -99,7 +99,7 @@
 
 ### 页面截图
 ![](https://i.imgur.com/NSlPnrU.png)<br>
-![](https://i.imgur.com/mg3CNAw.png)
+![](https://i.imgur.com/iDuyh0T.png)
 
 
 ### 如果您觉得还不错的话，千千万来一个star！
