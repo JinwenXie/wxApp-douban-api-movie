@@ -4,7 +4,7 @@
     <view class="category-container">
         <view class="category-title">
             <text class="category-name">{{ categorytitle }}</text>
-            <text class="more">更多></text>
+            <text class="more" wx:if="{{ categorytitle!='搜索结果' }}">更多></text>
         </view>
         <view class="movie-list">
             <block wx:for="{{ movies }}" wx:key="key" wx:for-item="movie">

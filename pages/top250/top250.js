@@ -11,27 +11,18 @@ Page({
             duration: 1000,
             movieData: []
         },
-        actionMovie: {},
-        comedyMovie: {},
-        loveMovie: {},
-        scienceFictionMovie: {}
+        top250Movie: {},
 
     },
 
     onLoad: function (event) {
         var publicUrl = app.globalData.doubanBase;
-        var in_theatersUrl = publicUrl + "top250" + "?start=0&count=10";
-        var action = publicUrl + "top250" + "?tag=动作&start=0&count=3";
-        var comedy = publicUrl + "top250" + "?tag=喜剧&start=4&count=3";
-        var love = publicUrl + "top250" + "?tag=爱情&start=7&count=3";
-        var scienceFiction = publicUrl + "top250" + "?tag=科幻&start=10&count=3";
+        var top250Swiper = publicUrl + "top250" + "?start=0&count=10";
+        var top250 = publicUrl + "top250" + "?start=0&count=21";
 
         wx.showNavigationBarLoading();
-        this.getMovieListData(in_theatersUrl, "in_theaters", "正在热映", "swiper");
-        this.getMovieListData(action, "actionMovie", "动作");
-        this.getMovieListData(comedy, "comedyMovie", "喜剧");
-        this.getMovieListData(love, "loveMovie", "爱情");
-        this.getMovieListData(scienceFiction, "scienceFictionMovie", "科幻");
+        this.getMovieListData(top250Swiper, "top250Swiper", "排行榜", "swiper");
+        this.getMovieListData(top250, "top250Movie", "排行榜");
     },
 
     //请求数据fn
@@ -89,5 +80,11 @@ Page({
         }
 
         wx.hideNavigationBarLoading();
+    },
+
+    goSearch: function () {
+        wx.navigateTo({
+            url: '../search/search'
+        })
     }
 })

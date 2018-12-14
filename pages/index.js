@@ -11,27 +11,17 @@ Page({
             duration: 1000,
             movieData: []
         },
-        BeiJingMovie: {},
-        ShangHaiMovie: {},
-        GuangZhouMovie: {},
-        ChengDuMovie: {}
-
+        IntheatersMovie: {}
     },
 
     onLoad: function (event) {
         var publicUrl = app.globalData.doubanBase;
         var in_theatersUrl = publicUrl + "in_theaters" + "?start=0&count=10";
-        var BeiJing = publicUrl + "in_theaters" + "?city=北京&start=0&count=3";
-        var GuangZhou = publicUrl + "in_theaters" + "?city=广州&start=0&count=3";
-        var ShangHai = publicUrl + "in_theaters" + "?city=上海&start=0&count=3";
-        var ChengDu = publicUrl + "in_theaters" + "?city=成都&start=0&count=3";
+        var intheaters = publicUrl + "in_theaters" + "?start=0&count=21";
 
         wx.showNavigationBarLoading();
         this.getMovieListData(in_theatersUrl, "in_theaters", "正在热映","swiper");
-        this.getMovieListData(BeiJing, "BeiJingMovie", "北京");
-        this.getMovieListData(GuangZhou, "GuangZhouMovie", "广州");
-        this.getMovieListData(ShangHai, "ShangHaiMovie", "上海");
-        this.getMovieListData(ChengDu, "ChengDuMovie", "成都");
+        this.getMovieListData(intheaters, "IntheatersMovie", "正在热映");
     },
 
     //请求数据fn

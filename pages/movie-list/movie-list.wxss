@@ -28,7 +28,5 @@
 }
 
 .movie-list {
-    display: flex;
-    flex-direction: row;
     padding: 30rpx 0 0 40rpx;
 }

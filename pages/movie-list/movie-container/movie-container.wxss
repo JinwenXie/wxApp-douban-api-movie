@@ -4,6 +4,8 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    float: left;
+    margin: 0 30rpx 40rpx 0;
 }
 .movie-img {
     width: 200rpx;

@@ -5,16 +5,13 @@
 
     <template is="swiper" data="{{ swiperData }}"></template>
 
-    <view class="search">
+    <view class="search" bindtap="goSearch">
         <view class="search-text">
             <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
             搜 索
         </view>
     </view>
     
-    <template is="movieList" data="{{ ...BeiJingMovie }}"></template>
-    <template is="movieList" data="{{ ...ShangHaiMovie }}"></template>
-    <template is="movieList" data="{{ ...GuangZhouMovie }}"></template>
-    <template is="movieList" data="{{ ...ChengDuMovie }}"></template>
+    <template is="movieList" data="{{ ...comingSoonMovie }}"></template>
 
 </view>

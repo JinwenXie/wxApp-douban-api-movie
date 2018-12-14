@@ -1,3 +1,4 @@
+@import '../movie-list/movie-list.wxss';
 
 .seacr-container {
     display: flex;

@@ -1,22 +1,28 @@
+<import src="../movie-list/movie-list.wxml" />
+
 <view class="seacr-container">
 
     <view class="search" bindtap="goSearch">
         <view class="search-ipt">
             <input 
+                placeholder="请输入电影名"
                 type="text" 
                 focus="{{ isFocus }}" 
                 bindfocus="searchIptFocus" 
                 bindblur="searchIptBlur"
                 bindinput="searchIpt"
+                bindconfirm="iptAccomplish"
             >
             </input>
-            <icon wx:if="{{ isCancel }}" class="search-clear" type="cancel" color="#b2b2b2" size="18"></icon>
+            <icon wx:if="{{ isCancel }}" bindtap="searchCancel" class="search-clear" type="cancel" color="#b2b2b2" size="18"></icon>
         </view>
         
-        <view class="search-btn">
+        <view class="search-btn" bindtap="searchMovie">
             <icon class="search-icon" type="search" size="16"></icon>
             <!-- 搜 索 -->
         </view>
     </view>
+
+    <template is="movieList" data="{{ ...searchMovie }}"></template>
 
 </view>

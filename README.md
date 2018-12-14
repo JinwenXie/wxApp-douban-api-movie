@@ -24,7 +24,7 @@
 1. 正在热映电影首页（已完成）；
 2. 即将上映电影首页（已完成）；
 3. 电影排行榜首页（已完成）；
-4. 电影搜索页（暂未完成）；
+4. 电影搜索页（已完成）；
 5. 正在热映电影列表页（暂未完成）；
 6. 即将上映电影列表页（暂未完成）；
 7. 电影排行榜列表页（暂未完成）；
@@ -37,6 +37,8 @@
 	│  app.json
 	│  app.wxss
 	│  project.config.json
+	│  README.md
+	│  tree.txt
 	│  
 	└─pages
 	    │  index.js
@@ -65,6 +67,12 @@
 	    │          star.wxml
 	    │          star.wxss
 	    │          
+	    ├─search
+	    │      search.js
+	    │      search.json
+	    │      search.wxml
+	    │      search.wxss
+	    │      
 	    ├─swiper
 	    │      swiper.wxml
 	    │      swiper.wxss

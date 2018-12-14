@@ -12,9 +12,6 @@
         </view>
     </view>
     
-    <template is="movieList" data="{{ ...BeiJingMovie }}"></template>
-    <template is="movieList" data="{{ ...ShangHaiMovie }}"></template>
-    <template is="movieList" data="{{ ...GuangZhouMovie }}"></template>
-    <template is="movieList" data="{{ ...ChengDuMovie }}"></template>
+    <template is="movieList" data="{{ ...IntheatersMovie }}"></template>
 
 </view>

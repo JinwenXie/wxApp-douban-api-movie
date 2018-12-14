@@ -4,13 +4,16 @@ var util = require("../utils/utils.js");
 
 Page({
     data: {
-        isFocus: true,
+        isFocus: false,
         isCancel: false,
+        searchValue: '',
         searchMovie: {}
     },
 
     onLoad: function (event) {
-
+        var searchUrl = app.globalData.doubanBase + "search?q=猩球崛起";
+        this.getMovieListData(searchUrl, "searchMovie", "搜索结果");
+        wx.showNavigationBarLoading();
     },
 
     //请求数据fn
@@ -52,7 +55,6 @@ Page({
             categorytitle: categorytitle,
             movies: movies
         };
-        console.log(res.subjects);
         this.setData(readyData);
 
         wx.hideNavigationBarLoading();
@@ -70,10 +72,34 @@ Page({
         });
     },
 
-    searchIpt: function(event){
+    iptAccomplish: function(event){
         var key = event.detail.value;
         var searchUrl = app.globalData.doubanBase + "search?q=" + key;
-        this.getMovieListData(searchUrl, "searchMovie", "");
+        this.getMovieListData(searchUrl, "searchMovie", "搜索结果");
         wx.showNavigationBarLoading();
+    },
+
+    searchIpt: function(event){
+        var key = event.detail.value;
+        this.setData({
+            searchValue: key
+        });
+        // var searchUrl = app.globalData.doubanBase + "search?q=" + key;
+        // this.getMovieListData(searchUrl, "searchMovie", "搜索结果");
+        // wx.showNavigationBarLoading();
+    },
+
+    searchMovie: function(){
+        if(this.data.searchValue.length==0) return false;
+        var searchUrl = app.globalData.doubanBase + "search?q=" + this.data.searchValue;
+        this.getMovieListData(searchUrl, "searchMovie", "搜索结果");
+        wx.showNavigationBarLoading();
+    },
+
+    searchCancel: function(){
+        this.setData({
+            isCancel: false,
+            searchValue: ''
+        });
     }
 })

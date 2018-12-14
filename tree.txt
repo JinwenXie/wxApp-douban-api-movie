@@ -1,10 +1,12 @@
 文件夹 PATH 列表
 卷序列号为 EE0F-0BD7
-wxApp-douban-api-movie:
+D:.
 │  app.js
 │  app.json
 │  app.wxss
 │  project.config.json
+│  README.md
+│  tree.txt
 │  
 └─pages
     │  index.js
@@ -20,6 +22,27 @@ wxApp-douban-api-movie:
     │      
     ├─data
     ├─images
+    │      .DS_Store
+    │      arrow-right.png
+    │      banner1.jpg
+    │      banner2.jpg
+    │      banner3.jpg
+    │      chat.png
+    │      diany.png
+    │      earphone.png
+    │      eartag.png
+    │      fx.png
+    │      icon_jjsy.png
+    │      icon_phb.png
+    │      icon_ry.png
+    │      sc.png
+    │      sch.png
+    │      star.png
+    │      sub1.png
+    │      sub2.png
+    │      timg.jpg
+    │      tree.png
+    │      yuedu.png
     │      
     ├─movie-list
     │  │  movie-list.wxml
@@ -33,6 +56,12 @@ wxApp-douban-api-movie:
     │          star.wxml
     │          star.wxss
     │          
+    ├─search
+    │      search.js
+    │      search.json
+    │      search.wxml
+    │      search.wxss
+    │      
     ├─swiper
     │      swiper.wxml
     │      swiper.wxss
