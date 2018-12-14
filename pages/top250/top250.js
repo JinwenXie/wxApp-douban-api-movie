@@ -52,7 +52,11 @@ Page({
         for (var idx in res.subjects) {
             var subject = res.subjects[idx];
             if (typeof swiperRe != 'undefined') {
-                swiperMovie.push(subject.images.medium);
+                var swiperTemp = {
+                    coverageUrl: subject.images.large,
+                    movieId: subject.id
+                }
+                swiperMovie.push(swiperTemp);
             } else {
                 var temp = {
                     stars: util.convertToStarsArray(subject.rating.stars),
@@ -85,6 +89,19 @@ Page({
     goSearch: function () {
         wx.navigateTo({
             url: '../search/search'
+        })
+    },
+
+    goList: function () {
+        wx.navigateTo({
+            url: '../list/list?typeurl=top250&type=排行榜'
+        })
+    },
+
+    onMovieDetailTap: function (event) {
+        var moviwId = event.currentTarget.dataset.movieid;
+        wx.navigateTo({
+            url: 'movie-details/movie-details?movieid=' + moviwId
         })
     }
 })

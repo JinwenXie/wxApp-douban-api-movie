@@ -12,7 +12,7 @@
         >
             <block wx:for="{{ swiperData.movieData }}" wx:key="key">
                 <swiper-item>
-                    <image src="{{ item }}"></image>
+                    <image src="{{ item.coverageUrl }}" catchtap="onMovieDetailTap" data-movieid="{{item.movieId}}"></image>
                 </swiper-item>
             </block>
         </swiper>

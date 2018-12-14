@@ -1,9 +1,11 @@
 {
     "pages": [
         "pages/index",
+        "pages/list/list",
+        "pages/search/search",
         "pages/top250/top250",
-        "pages/coming-soon/coming-soon",
-        "pages/search/search"
+        "pages/movie-details/movie-details",
+        "pages/coming-soon/coming-soon"
     ],
     "window": {
         "navigationBarTitleText": "正在热映",

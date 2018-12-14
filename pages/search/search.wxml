@@ -2,10 +2,20 @@
 
 <view class="seacr-container">
 
+    <view class="type-btn-container">
+        <block wx:for="{{movieType}}" wx:key="key" wx:for-item="type">
+            <button class="{{ type == isActive ? 'active':''}}
+                data-type="{{ type }}" 
+                bindtap="searchMovieType"
+            >{{ type }}</button>
+        </block>
+    </view>
+
     <view class="search" bindtap="goSearch">
         <view class="search-ipt">
             <input 
                 placeholder="请输入电影名"
+                placeholder-class="input-placeholder"
                 type="text" 
                 focus="{{ isFocus }}" 
                 bindfocus="searchIptFocus" 

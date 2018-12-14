@@ -1,11 +1,26 @@
 @import '../movie-list/movie-list.wxss';
 
+.type-btn-container {
+    width: 730rpx;
+    padding: 20rpx 0 0 20rpx;
+}
+.type-btn-container button {
+    width: 110rpx;
+    font-size: 24rpx;
+    float: left;
+    margin: 0 10rpx 10rpx 0;
+    color: #666;
+}
+.type-btn-container .active {
+    color: #25c88a;
+}
+
+
 .seacr-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .search {
     display: flex;
     flex-direction: row;
@@ -24,11 +39,14 @@
     border-radius: 8rpx;
 }
 .search-ipt input {
-    width: 520rpx;
+    width: 510rpx;
     font-size: 28rpx;
     line-height: 60rpx;
     color: #333;
-    padding: 0 10rpx;
+    padding: 0 10rpx 0 20rpx;
+}
+.input-placeholder {
+    font-size: 24rpx;
 }
 .search-ipt .search-clear {
     margin: 6rpx 0 0 0;

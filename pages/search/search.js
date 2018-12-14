@@ -4,15 +4,17 @@ var util = require("../utils/utils.js");
 
 Page({
     data: {
+        movieType: ['校园', '喜剧', '动作', '都市', '动画', '科幻', '惊悚', '历史', '战争', '悬疑', '犯罪','灾难'],
+        isActive: '校园',
         isFocus: false,
         isCancel: false,
         searchValue: '',
-        searchMovie: {}
+        searchMovie: {} 
     },
 
     onLoad: function (event) {
-        var searchUrl = app.globalData.doubanBase + "search?q=猩球崛起";
-        this.getMovieListData(searchUrl, "searchMovie", "搜索结果");
+        var searchUrl = app.globalData.doubanBase + "search?tag=校园&start=0&conut=30";
+        this.getMovieListData(searchUrl, "searchMovie", "校园");
         wx.showNavigationBarLoading();
     },
 
@@ -60,6 +62,22 @@ Page({
         wx.hideNavigationBarLoading();
     },
 
+    searchMovieType: function(event){
+        var movieType = event.currentTarget.dataset.type;
+        this.setData({
+            isActive: movieType
+        });
+        var searchUrl = app.globalData.doubanBase + "search?tag=" + movieType + "&start=0&conut=18";
+        this.getMovieListData(searchUrl, "searchMovie", movieType);
+        wx.showNavigationBarLoading();
+    },
+
+    goList: function () {
+        wx.navigateTo({
+            url: '../list/list?typeurl=search&type=' + this.data.isActive
+        })
+    },
+
     searchIptFocus: function(){
         this.setData({
             isCancel: true
@@ -101,5 +119,12 @@ Page({
             isCancel: false,
             searchValue: ''
         });
+    },
+
+    onMovieDetailTap: function (event) {
+        var moviwId = event.currentTarget.dataset.movieid;
+        wx.navigateTo({
+            url: 'movie-details/movie-details?movieid=' + moviwId
+        })
     }
 })
