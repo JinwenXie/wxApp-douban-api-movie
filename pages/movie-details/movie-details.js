@@ -6,7 +6,6 @@ Page({
     },
     onLoad: function (options) {
         // 获取url参数
-        var movieId = options.movieid;
         console.log(movieId);
         // 电影详细信息（条目信息）url
         var url = app.globalData.doubanBase + "subject/" + movieId;

@@ -101,7 +101,7 @@ Page({
     onMovieDetailTap: function (event) {
         var moviwId = event.currentTarget.dataset.movieid;
         wx.navigateTo({
-            url: 'movie-details/movie-details?movieid=' + moviwId
+            url: '../movie-details/movie-details?movieid=' + moviwId
         })
     }
 })

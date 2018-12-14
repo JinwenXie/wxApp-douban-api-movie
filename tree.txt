@@ -40,6 +40,8 @@ D:.
     ©¦      page_3.png
     ©¦      page_4.png
     ©¦      page_5.png
+    ©¦      page_6.png
+    ©¦      page_7.png
     ©¦      sc.png
     ©¦      sch.png
     ©¦      star.png
@@ -54,6 +56,12 @@ D:.
     ©¦      list.json
     ©¦      list.wxml
     ©¦      list.wxss
+    ©¦      
+    ©À©¤movie-details
+    ©¦      movie-details.js
+    ©¦      movie-details.json
+    ©¦      movie-details.wxml
+    ©¦      movie-details.wxss
     ©¦      
     ©À©¤movie-list
     ©¦  ©¦  movie-list.wxml

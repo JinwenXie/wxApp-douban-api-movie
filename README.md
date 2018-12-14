@@ -11,7 +11,7 @@
 	git@github.com:JinwenXie/wxApp-douban-api-movie.git
 
 直接使用命令克隆下载到本地，或者直接下载压缩文件到本地，先**启动Nginx**，再使用微信开发者工具打开<br>
-如果没有使用Nginx的话，微信开发者工具打开项目后，打开app.js文件做如下更改：<br>
+**如果没有使用Nginx的话**，微信开发者工具打开项目后，打开app.js文件做如下更改：<br>
 ![](https://i.imgur.com/HY70LUV.png)<br>
 
 保存刷新后即可看到数据有显示了
@@ -26,9 +26,9 @@
 3. 电影排行榜首页（已完成）；
 4. 电影搜索页（已完成）；
 5. 电影列表页（已完成）；
-6. 电影详情页（暂未完成）；
+6. 电影详情页（已完成）；
 
-### 暂时目录结构
+### 目录结构
 	
 	wxApp-douban-api-movie:
 	│  app.js
@@ -50,7 +50,6 @@
 	    │      coming-soon.wxml
 	    │      coming-soon.wxss
 	    │      
-	    ├─data
 	    ├─images
 	    │      
 	    ├─list
@@ -58,6 +57,12 @@
 	    │      list.json
 	    │      list.wxml
 	    │      list.wxss
+	    │      
+	    ├─movie-details
+	    │      movie-details.js
+	    │      movie-details.json
+	    │      movie-details.wxml
+	    │      movie-details.wxss
 	    │      
 	    ├─movie-list
 	    │  │  movie-list.wxml
@@ -89,10 +94,12 @@
 	    │      
 	    └─utils
 	            utils.js
+	            
             
 
 ### 页面截图
-
+![](https://i.imgur.com/NSlPnrU.png)<br>
+![](https://i.imgur.com/mg3CNAw.png)
 
 
 ### 如果您觉得还不错的话，千千万来一个star！

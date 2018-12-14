@@ -126,5 +126,12 @@ Page({
         wx.navigateTo({
             url: 'movie-details/movie-details?movieid=' + moviwId
         })
+    },
+
+    onMovieDetailTap: function (event) {
+        var moviwId = event.currentTarget.dataset.movieid;
+        wx.navigateTo({
+            url: '../movie-details/movie-details?movieid=' + moviwId
+        })
     }
 })
