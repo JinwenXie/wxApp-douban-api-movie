@@ -1,0 +1,50 @@
+
+.seacr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    width: 710rpx;
+    padding: 20rpx;
+    border-radius: 20rpx;
+}
+.search-ipt {
+    width: 600rpx;
+    display: flex;
+    flex-direction: row;
+    margin-right: 10rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 1px solid #ddd;
+    border-radius: 8rpx;
+}
+.search-ipt input {
+    width: 520rpx;
+    font-size: 28rpx;
+    line-height: 60rpx;
+    color: #333;
+    padding: 0 10rpx;
+}
+.search-ipt .search-clear {
+    margin: 6rpx 0 0 0;
+}
+.search .search-btn {
+    width: 100rpx;
+    font-size: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    color: #25c88a;
+    border: 1px solid #ddd;
+    border-radius: 8rpx;
+}
+.search icon {
+    margin-right: 10rpx;
+    position: relative;
+    top: 6rpx;
+    left: 2rpx;
+}

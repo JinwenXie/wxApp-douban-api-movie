@@ -89,5 +89,12 @@ Page({
         }
 
         wx.hideNavigationBarLoading();
+    },
+
+    goSearch: function(){
+        wx.navigateTo({
+            url: 'search/search'
+        })
     }
+
 })
