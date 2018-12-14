@@ -6,7 +6,7 @@ Page({
     },
     onLoad: function (options) {
         // 获取url参数
-        console.log(movieId);
+        var movieId = options.movieid;
         // 电影详细信息（条目信息）url
         var url = app.globalData.doubanBase + "subject/" + movieId;
         util.httpRequest(url, this.callback);
@@ -28,6 +28,9 @@ Page({
             director.name = data.directors[0].name;
             director.id = data.directors[0].id;
         }
+        wx.setNavigationBarTitle({
+            title: data.title
+        })
         var movie = {
             movieImg: data.images ? data.images.large : "",
             country: data.countries[0],
