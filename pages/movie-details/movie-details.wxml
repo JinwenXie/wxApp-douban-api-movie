@@ -1,4 +1,4 @@
-<import src="../movie-list/star/star.wxml" />
+<import src="../template/movie-list/star/star.wxml" />
 <view class="container">
     <image class="head-img" src="{{movie.movieImg}}" mode="aspectFill" />
     <view class="head-img-hover" data-src="{{movie.movieImg}}" catchtap="viewMoviePostImg">

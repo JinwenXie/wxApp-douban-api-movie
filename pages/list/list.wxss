@@ -1,4 +1,4 @@
-@import '../movie-list/movie-container/movie-container';
+@import '../template/movie-list/single-movie/single-movie.wxss';
 
 .list-container {
     padding:  20rpx 0 20rpx 45rpx;

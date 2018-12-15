@@ -1,0 +1,20 @@
+<template name="swiper">
+    <view class="scroll">
+        <swiper 
+            indicator-dots="{{ swiperData.indicatorDots }}"
+            circular="true" 
+            autoplay="{{ swiperData.autoplay }}" 
+            interval="{{ swiperData.interval }}" 
+            duration="{{ swiperData.duration }}"
+            previous-margin="30rpx"
+            next-margin="30rpx"
+            display-multiple-items="3"
+        >
+            <block wx:for="{{ swiperData.movieData }}" wx:key="key">
+                <swiper-item>
+                    <image src="{{ item.coverageUrl }}" catchtap="onMovieDetailTap" data-movieid="{{item.movieId}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</template>

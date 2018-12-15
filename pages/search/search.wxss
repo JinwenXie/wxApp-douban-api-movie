@@ -1,4 +1,4 @@
-@import '../movie-list/movie-list.wxss';
+@import '../template/movie-list/movie-list.wxss';
 
 .type-btn-container {
     width: 730rpx;

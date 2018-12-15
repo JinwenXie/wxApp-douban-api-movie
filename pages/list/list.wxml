@@ -1,4 +1,4 @@
-<import src="../movie-list/movie-container/movie-container" />
+<import src="../template/movie-list/single-movie/single-movie" />
 
 <view class="list-container">
     <block wx:for="{{ listMovie }}" wx:key="key" wx:for-item="movie">

@@ -1,4 +1,4 @@
-<import src="../movie-list/movie-list.wxml" />
+<import src="../template/movie-list/movie-list.wxml" />
 
 <view class="seacr-container">
 

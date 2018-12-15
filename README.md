@@ -65,28 +65,29 @@
 	    │      movie-details.wxml
 	    │      movie-details.wxss
 	    │      
-	    ├─movie-list
-	    │  │  movie-list.wxml
-	    │  │  movie-list.wxss
-	    │  │  
-	    │  ├─movie-container
-	    │  │      movie-container.wxml
-	    │  │      movie-container.wxss
-	    │  │      
-	    │  └─star
-	    │          star.wxml
-	    │          star.wxss
-	    │          
 	    ├─search
 	    │      search.js
 	    │      search.json
 	    │      search.wxml
 	    │      search.wxss
 	    │      
-	    ├─swiper
-	    │      swiper.wxml
-	    │      swiper.wxss
-	    │      
+	    ├─template
+	    │  ├─movie-list
+	    │  │  │  movie-list.wxml
+	    │  │  │  movie-list.wxss
+	    │  │  │  
+	    │  │  ├─single-movie
+	    │  │  │      single-movie.wxml
+	    │  │  │      single-movie.wxss
+	    │  │  │      
+	    │  │  └─star
+	    │  │          star.wxml
+	    │  │          star.wxss
+	    │  │          
+	    │  └─swiper
+	    │          swiper.wxml
+	    │          swiper.wxss
+	    │          
 	    ├─top250
 	    │      top250.js
 	    │      top250.json

@@ -1,5 +1,5 @@
-@import '../swiper/swiper.wxss';
-@import '../movie-list/movie-list.wxss';
+@import '../template/swiper/swiper.wxss';
+@import '../template/movie-list/movie-list.wxss';
 
 .index-container {
     display: flex;
