@@ -103,5 +103,12 @@ Page({
         }
         this.getMovieListData(listUrl, "listMovie", this.data.type);
         wx.showNavigationBarLoading();
+    },
+
+    onMovieDetailTap: function (event) {
+        var moviwId = event.currentTarget.dataset.movieid;
+        wx.navigateTo({
+            url: '../movie-details/movie-details?movieid=' + moviwId
+        })
     }
 });
