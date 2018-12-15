@@ -2,6 +2,7 @@ var util = require("../utils/utils.js");
 var app = getApp();
 Page({
     data: {
+        isIndicatorDots: false,
         movie: {}
     },
     onLoad: function (options) {

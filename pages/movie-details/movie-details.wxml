@@ -48,14 +48,24 @@
     </view>
     <view class="hr"></view>
     <view class="cast">
-        <text class="cast-font"> 影人</text>
-        <scroll-view class="cast-imgs" scroll-x="true" style="width:100%">
+        <text class="cast-font"> 演员</text>
+        <swiper 
+            class="cast-imgs" 
+            indicator-dots="{{ isIndicatorDots }}"
+            circular="true" 
+            autoplay="false" 
+            interval="3000" 
+            duration="50"
+            previous-margin="30rpx"
+            next-margin="30rpx"
+            display-multiple-items="4"
+        >
             <block wx:for="{{movie.castsInfo}}" wx:for-item="item" wx:key="key">
-                <view class="cast-container">
+                <swiper-item class="cast-container">
                     <image class="cast-img" src="{{item.img}}"></image>
                     <text class="cast-name">{{item.name}}</text>
-                </view>
+                </swiper-item>
             </block>
-        </scroll-view>
+        </swiper>
     </view>
 </view>

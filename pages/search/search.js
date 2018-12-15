@@ -102,9 +102,6 @@ Page({
         this.setData({
             searchValue: key
         });
-        // var searchUrl = app.globalData.doubanBase + "search?q=" + key;
-        // this.getMovieListData(searchUrl, "searchMovie", "搜索结果");
-        // wx.showNavigationBarLoading();
     },
 
     searchMovie: function(){

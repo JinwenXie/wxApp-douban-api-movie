@@ -4,12 +4,19 @@
     width: 730rpx;
     padding: 20rpx 0 0 20rpx;
 }
-.type-btn-container button {
-    width: 110rpx;
+.type-btn-container text {
+    width: 106rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 1rpx solid #ddd;
+    border-radius: 10rpx;
     font-size: 24rpx;
     float: left;
     margin: 0 10rpx 10rpx 0;
     color: #666;
+    
 }
 .type-btn-container .active {
     color: #25c88a;

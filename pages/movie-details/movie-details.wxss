@@ -117,7 +117,7 @@
 }
 
 .cast{
-    margin-left:40rpx;
+    margin-left:0rpx;
     display:flex;
     flex-direction: column;
     margin-top:50rpx;
@@ -125,29 +125,29 @@
 
 .cast-font{
     color: #999;
-    margin-bottom: 40rpx;
+    margin: 0 0 40rpx 40rpx;
 }
 
+.cast-imgs{
+    width: 750rpx;
+}
 .cast-container{
     display:inline-flex;
     flex-direction: column;
     margin-bottom: 50rpx;
-    margin-right: 40rpx;
-    width: 170rpx;
-    text-align:center;
+    margin-right: 20rpx;
+    width: 175rpx;
     white-space: normal;
+    height: 225rpx;
 }
-
-.cast-imgs{
-    white-space: nowrap;
-}
-
 .cast-img{
-    width: 170rpx;
-    height: 210rpx;
+    width: 175rpx;
+    height: 225rpx;
 }
 .cast-name{
-    margin: 10rpx auto 0;
+    width: 175rpx;
+    text-align: center;
+    margin-top: 15rpx;
 }
 
 
