@@ -11,7 +11,7 @@
 
 ### 克隆到本地
 
-	git@github.com:JinwenXie/wxApp-douban-api-movie.git
+	git clone git@github.com:JinwenXie/wxApp-douban-api-movie.git
 
 直接使用命令克隆下载到本地，或者直接下载压缩文件到本地，先**启动Nginx**，再使用微信开发者工具打开<br>
 **如果没有使用Nginx的话**，微信开发者工具打开项目后，打开app.js文件做如下更改：<br>
